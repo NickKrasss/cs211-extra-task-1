@@ -51,3 +51,19 @@ int get_seconds(int seconds)
     return seconds % 60;
 }
 
+// Функция для преобразования времени в UTC
+double time_to_utc(int utc_offset, double time)
+{
+    double time_minus_utc_offset = time - utc_offset;
+
+    if (time_minus_utc_offset < 0) {
+        time_minus_utc_offset += 24;
+    }
+    else if (time_minus_utc_offset >= 24) {
+        time_minus_utc_offset -= 24;
+    }
+
+    return time_minus_utc_offset;
+}
+
+
