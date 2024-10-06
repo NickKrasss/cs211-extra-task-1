@@ -33,4 +33,10 @@ double to_24_hour_clock(double hours)
     return (floor_hours % 24 + minutes);
 }
 
+// Функция для получения часов из секунд
+int get_hours(int seconds)
+{
+    return (seconds / 3600) % 4;
+}
+
 
