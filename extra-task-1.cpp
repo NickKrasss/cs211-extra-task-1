@@ -45,4 +45,9 @@ int get_minutes(int seconds)
     return (seconds % 3600) / 60;
 }
 
+// Функция для получения секунд из секунд
+int get_seconds(int seconds)
+{
+    return seconds % 60;
+}
 
