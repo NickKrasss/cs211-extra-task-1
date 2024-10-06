@@ -66,4 +66,11 @@ double time_to_utc(int utc_offset, double time)
     return time_minus_utc_offset;
 }
 
+// Функция для преобразования времени из UTC
+double time_from_utc(int utc_offset, double time)
+{
+    return time_to_utc(-utc_offset, time);
+}
+
+
 
