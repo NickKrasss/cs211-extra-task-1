@@ -22,4 +22,15 @@ double to_float_hours(int hours, int minutes, int seconds)
     return hours + (minutes / 60.0) + (seconds / 3600.0);
 }
 
+// Функция для преобразования времени в 24-часовой формат
+double to_24_hour_clock(double hours)
+{
+    assert(hours >= 0);
+
+    double minutes = hours - floor(hours);
+    int floor_hours = floor(hours);
+
+    return (floor_hours % 24 + minutes);
+}
+
 
