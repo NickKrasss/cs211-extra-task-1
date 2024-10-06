@@ -39,4 +39,10 @@ int get_hours(int seconds)
     return (seconds / 3600) % 4;
 }
 
+// Функция для получения минут из секунд
+int get_minutes(int seconds)
+{
+    return (seconds % 3600) / 60;
+}
+
 
